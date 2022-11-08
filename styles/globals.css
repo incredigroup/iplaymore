@@ -1,0 +1,171 @@
+@import "../public/css/plugins.css";
+@import "../public/css/style.css";
+@import "react-circular-progressbar/dist/styles.css";
+
+.edrea_tm_modalbox {
+  top: -70px;
+}
+@media (max-width: 1040px) {
+  .edrea_tm_content {
+    z-index: 99;
+  }
+}
+.edrea_tm_mobile_menu,
+.edrea_tm_settings {
+  z-index: 999;
+}
+svg.CircularProgressbar {
+  width: 110px;
+  height: 110px;
+}
+.CircularProgressbar .CircularProgressbar-text {
+  fill: unset !important;
+  font-size: unset;
+}
+.CircularProgressbar .CircularProgressbar-path {
+  stroke: #eb4a4c;
+}
+.CircularProgressbar .CircularProgressbar-trail {
+  stroke: #a2a2a2;
+  stroke-linecap: round;
+}
+.testimonial {
+  overflow: hidden;
+}
+@media only screen and (max-width: 1024px) {
+  .waves canvas {
+    bottom: -34px;
+    position: fixed;
+  }
+}
+
+/* image popup */
+img.mfp-img {
+  box-shadow: 0 0 8px rgb(0 0 0 / 60%);
+  position: absolute;
+  max-height: 392px;
+  padding: 0 !important;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.mfp-img-container .mfp-content {
+  max-width: 400px !important;
+}
+.mfp-img-container .mfp-close {
+  top: -110px;
+  right: -24px;
+}
+
+.button-group .button:first-child .alink {
+  background-color: #0070f3 !important;
+}
+
+.button-group {
+  display: block !important;
+  text-align: center;
+}
+
+.button .alink {
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  background-color: var(--main-color);
+  padding: 10px 40px;
+  text-align: center;
+  border-radius: 50px;
+  font-family: "Poppins";
+  transition: all 0.3s ease;
+}
+
+.button-group a:hover{
+  background-color: #fff;
+}
+
+.button-group .button:last-child {
+  margin-top: 10px;
+}
+
+.button-group .button:last-child:hover {
+  color: rgb(7, 117, 160);
+}
+
+.f-16 {
+  font-size: 16px;
+}
+
+#signin{
+  z-index: 20;
+}
+
+.edrea_tm_modalbox.opened {
+  z-index: 30;
+}
+
+.button .alink:hover {
+  /* background-color: #fff !important; */
+  color: black;
+}
+
+.dropbox {
+  position:absolute;
+  width: 100px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: transparent;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,1);
+  padding: 5px 10px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content{
+  display: block;
+}
+
+.logout:hover {
+  cursor: pointer;
+}
+
+.no-padding {
+  padding-left: 0px !important;
+}
+
+.email_modalbox input{
+  width: 100%;
+  height: 45px;
+  background-color: #a2a2a2;
+  border: none;
+  color: #121212;
+  padding: 20px;
+  font-family: "Poppins";
+  border-radius: 10px;
+}
+
+.email_modalbox {
+  margin-top: 100px;
+  height: 350px;
+}
+
+@media (max-width: 1040px) {
+  .about_title {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .edrea_tm_button a, .edrea_tm_button .a {
+    font-size: 10px;
+  }
+  .button label {
+    font-size: 12px;
+  }
+}
