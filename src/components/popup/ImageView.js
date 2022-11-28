@@ -1,6 +1,6 @@
 import React, { Fragment, useEffect, useState } from "react";
 import useClickOutside from "../../useClickOutside";
-import Image from 'next/image'
+import Image from 'next/image';
 
 const ImgViews = ({ close, src }) => {
   let domNode = useClickOutside(() => {

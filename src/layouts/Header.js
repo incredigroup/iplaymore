@@ -1,5 +1,6 @@
 import { useContext, useEffect } from "react";
 import { context } from "../context/context";
+import Image from 'next/image';
 
 const Header = ( {route} ) => {
   const navContext = useContext(context);
@@ -22,7 +23,12 @@ const Header = ( {route} ) => {
       <div className="header_inner">
         <div className="logo">
           <a href="#home" onClick={() => changeNav("home")}>
-            <img src="img/logo/iplaymore_logo.png" alt="" />
+            <Image src="/img/logo/iplaymore_logo.png"
+                   alt=""
+                   width="250px"
+                   height="60px"
+                  //  style={{ width: "250px", height: "100%" }}
+              />
           </a>
         </div>
         <div className="menu">
