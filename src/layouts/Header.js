@@ -22,7 +22,7 @@ const Header = ( {route} ) => {
       <div className="header_inner">
         <div className="logo">
           <a href="#home" onClick={() => changeNav("home")}>
-            <img src="img/logo/iplaymore_1080x454.png" alt="" />
+            <img src="img/logo/iplaymore_logo.png" alt="" />
           </a>
         </div>
         <div className="menu">
@@ -32,19 +32,34 @@ const Header = ( {route} ) => {
                 Home
               </a>
             </li>
-            <li className={activeNav("videos")}>
-              <a href="#videos" onClick={() => changeNav("videos")}>
-                Videos
+            <li className={activeNav("bonfire")}>
+              <a href="#bonfire" onClick={() => changeNav("bonfire")}>
+              Bonfire Stories
               </a>
             </li>
-              <li className={activeNav("bonfire")}>
-                <a href="#bonfire" onClick={() => changeNav("bonfire")}>
-                Bonfire Stories
-                </a>
-              </li>
+            <li className={activeNav("videos")}>
+              <a href="#videos" onClick={() => changeNav("videos")}>
+                Comic
+              </a>
+            </li>
             <li className={activeNav("game")}>
               <a href="#game" onClick={() => changeNav("game")}>
                 Game
+              </a>
+            </li>
+            <li className={activeNav("novel")}>
+              <a href="#novel" onClick={() => changeNav("novel")}>
+                Novel
+              </a>
+            </li>
+            <li className={activeNav("music")}>
+              <a href="#music" onClick={() => changeNav("music")}>
+                Music
+              </a>
+            </li>
+            <li className={activeNav("marketplace")}>
+              <a href="#marketplace" onClick={() => changeNav("marketplace")}>
+                Marketplace
               </a>
             </li>
             {logined?
@@ -64,8 +79,7 @@ const Header = ( {route} ) => {
             </li>:
             <li className='`{activeNav("signin")}` dropbox'>
               <a href="#login" onClick={() => changeNav("signin")}>
-               Sign In 
-
+               Log-in 
               </a>
             </li>
             }

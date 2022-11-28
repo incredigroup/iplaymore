@@ -53,14 +53,34 @@ const MobileHeader = () => {
                   Home
                 </a>
               </li>
-              <li className={activeNav("videos")}>
-                <a href="#videos" onClick={() => onClick("portfolio")}>
-                Videos 
-                </a>
-              </li>
               <li className={activeNav("bonfire")}>
                 <a href="#bonfire" onClick={() => onClick("bonfire")}>
                 Bonfire Stories
+                </a>
+              </li>
+              <li className={activeNav("videos")}>
+                <a href="#videos" onClick={() => onClick("videos")}>
+                  Comic
+                </a>
+              </li>
+              <li className={activeNav("game")}>
+                <a href="#game" onClick={() => onClick("game")}>
+                  Game
+                </a>
+              </li>
+              <li className={activeNav("novel")}>
+                <a href="#novel" onClick={() => onClick("novel")}>
+                  Novel
+                </a>
+              </li>
+              <li className={activeNav("music")}>
+                <a href="#music" onClick={() => onClick("music")}>
+                  Music
+                </a>
+              </li>
+              <li className={activeNav("marketplace")}>
+                <a href="#marketplace" onClick={() => onClick("marketplace")}>
+                  Marketplace
                 </a>
               </li>
               {/* <li className={activeNav("login")}>
@@ -91,7 +111,7 @@ const MobileHeader = () => {
               </li>:
               <li className={activeNav("signin")}>
                 <a href="#login" onClick={() => onClick("signin")}>
-                  Sign In 
+                  Log-in 
                 </a>
               </li>
               }
