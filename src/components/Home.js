@@ -3,6 +3,7 @@ import { context } from "../context/context";
 import AnimatedText from "./AnimatedText";
 import { useRouter } from "next/router";
 import Image from "next/image";
+// import Smoke from "./Smoke";
 
 const homeData = {
   lastName: "THUNDER! ©",
@@ -40,11 +41,8 @@ const Home = ({ activeWithBtn, route }) => {
               // layout="fill"
             />
           </div>
-          {/* <h3 className="job">
-            <AnimatedText />
-          </h3> */}
           <h3 className="job">
-            Fresh organic gameplay
+            <AnimatedText />
           </h3>
           <div className="edrea_tm_button"> 
             <a href='#register' className="a" style={{width:'50%', marginTop: '20px'}} onClick={() => changeNav('register')}>Sign Up To Play Early!</a>

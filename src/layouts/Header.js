@@ -23,12 +23,12 @@ const Header = ( {route} ) => {
       <div className="header_inner">
         <div className="logo">
           <a href="#home" onClick={() => changeNav("home")}>
-            <Image src="/img/logo/iplaymore_logo.png"
-                   alt=""
-                   width="250px"
-                   height="60px"
-                  //  style={{ width: "250px", height: "100%" }}
-              />
+            <Image 
+              src="/img/logo/iplaymore_logo.png"
+              alt=""
+              width="250px"
+              height="60px"
+            />
           </a>
         </div>
         <div className="menu">
