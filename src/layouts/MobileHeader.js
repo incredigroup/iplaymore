@@ -1,5 +1,6 @@
 import { Fragment, useContext, useState } from "react";
 import { context } from "../context/context";
+import Image from "next/image";
 
 const MobileHeader = () => {
   const [toggle, setToggle] = useState(false);
@@ -23,7 +24,11 @@ const MobileHeader = () => {
         <div className="topbar_inner">
           <div className="logo">
             <a href="#">
-              <img src="img/logo/iplaymore_1080x454.png" alt="" />
+              <Image src="/img/logo/iplaymore_logo.png"
+                   alt=""
+                   width="250px"
+                   height="60px"
+              />
             </a>
           </div>
           <div className="trigger">
@@ -53,14 +58,34 @@ const MobileHeader = () => {
                   Home
                 </a>
               </li>
-              <li className={activeNav("videos")}>
-                <a href="#videos" onClick={() => onClick("portfolio")}>
-                Videos 
-                </a>
-              </li>
               <li className={activeNav("bonfire")}>
                 <a href="#bonfire" onClick={() => onClick("bonfire")}>
                 Bonfire Stories
+                </a>
+              </li>
+              <li className={activeNav("videos")}>
+                <a href="#videos" onClick={() => onClick("videos")}>
+                  Comic
+                </a>
+              </li>
+              <li className={activeNav("game")}>
+                <a href="#game" onClick={() => onClick("game")}>
+                  Game
+                </a>
+              </li>
+              <li className={activeNav("novel")}>
+                <a href="#novel" onClick={() => onClick("novel")}>
+                  Novel
+                </a>
+              </li>
+              <li className={activeNav("music")}>
+                <a href="#music" onClick={() => onClick("music")}>
+                  Music
+                </a>
+              </li>
+              <li className={activeNav("marketplace")}>
+                <a href="#marketplace" onClick={() => onClick("marketplace")}>
+                  Marketplace
                 </a>
               </li>
               {/* <li className={activeNav("login")}>
@@ -91,7 +116,7 @@ const MobileHeader = () => {
               </li>:
               <li className={activeNav("signin")}>
                 <a href="#login" onClick={() => onClick("signin")}>
-                  Sign In 
+                  Log-in 
                 </a>
               </li>
               }

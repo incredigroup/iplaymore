@@ -364,11 +364,12 @@ h6 {
   justify-content: space-between;
 }
 .edrea_tm_header .logo img {
-  max-width: 100px;
+  max-width: 250px;
 }
 .edrea_tm_header .menu ul {
   margin: 0px;
   list-style-type: none;
+  margin-right: 50px;
 }
 .edrea_tm_header .menu ul li {
   margin: 0px 30px 0px 0px;
@@ -2195,7 +2196,7 @@ h6 {
     font-size: 15px;
   }
   .edrea_tm_header {
-    width: 800px;
+    width: 1200px;
   }
   .edrea_tm_header .header_inner {
     padding-top: 30px;
@@ -2203,7 +2204,7 @@ h6 {
   .edrea_tm_content {
     top: 80px;
     bottom: 80px;
-    width: 800px;
+    width: 1200px;
   }
   .edrea_tm_home .name {
     font-size: 55px;
@@ -2285,6 +2286,18 @@ h6 {
     padding: 25px 20px 22px 20px;
   }
 }
+
+@media (max-width: 1200px) {
+  .edrea_tm_header {
+    width: 1000px;
+  }
+  .edrea_tm_content {
+    top: 80px;
+    bottom: 80px;
+    width: 1000px;
+  }
+}
+
 @media (max-width: 1040px) {
   .mouse-cursor {
     display: none;

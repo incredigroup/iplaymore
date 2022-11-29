@@ -155,6 +155,11 @@ img.mfp-img {
   height: 350px;
 }
 
+.home-thunder img{
+  width: 450px;
+  height: 300px;
+}
+
 @media (max-width: 1040px) {
   .about_title {
     margin-top: 30px;
