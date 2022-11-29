@@ -9,7 +9,7 @@ import Header from "./Header";
 import MobileHeader from "./MobileHeader";
 import Mouse from "./Mouse";
 import PreLoader from "./PreLoader";
-import Settings from "./Settings";
+import Image from "next/image";
 
 const Layout = ({ children, route }) => {
   useEffect(() => {
@@ -60,6 +60,14 @@ const Layout = ({ children, route }) => {
         {/* /MOBILE MENU */}
         {/* HEADER */}
         <Header route={route}/>
+        <div className="left-logo">
+          <Image 
+            src="/img/logo/iPM_favicons_22_32x32.png"
+            alt=""
+            width="50px"
+            height="50px"
+          />
+        </div>
         {/* /HEADER */}
         {/* CONTENT */}
         <div className="edrea_tm_content">{children}</div>
