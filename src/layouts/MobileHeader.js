@@ -1,5 +1,6 @@
 import { Fragment, useContext, useState } from "react";
 import { context } from "../context/context";
+import Image from "next/image";
 
 const MobileHeader = () => {
   const [toggle, setToggle] = useState(false);
@@ -23,7 +24,11 @@ const MobileHeader = () => {
         <div className="topbar_inner">
           <div className="logo">
             <a href="#">
-              <img src="img/logo/iplaymore_1080x454.png" alt="" />
+              <Image src="/img/logo/iplaymore_logo.png"
+                   alt=""
+                   width="250px"
+                   height="60px"
+              />
             </a>
           </div>
           <div className="trigger">
