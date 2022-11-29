@@ -28,6 +28,7 @@
     "react-use": "^17.4.0",
     "streamr-client": "^6.0.9",
     "swiper": "^8.2.4",
+    "three": "^0.146.0",
     "underscore": "^1.13.6",
     "web3": "^1.8.0",
     "webkit": "^0.0.0",

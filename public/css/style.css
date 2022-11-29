@@ -349,7 +349,7 @@ h6 {
 
 .edrea_tm_header {
   position: fixed;
-  width: 900px;
+  width: 80%;
   transform: translateX(-50%);
   left: 50%;
 }
@@ -358,7 +358,7 @@ h6 {
   height: auto;
   clear: both;
   float: left;
-  padding-top: 40px;
+  padding-top: 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -403,7 +403,7 @@ h6 {
 
 .edrea_tm_content {
   position: fixed;
-  width: 1000px;
+  width: 60%;
   top: 100px;
   bottom: 100px;
   left: 50%;
@@ -473,7 +473,6 @@ h6 {
 .edrea_tm_home .job {
   font-size: 25px;
   font-weight: 500;
-  color: #a2a2a2;
   margin-bottom: 40px;
 }
 .edrea_tm_home .job b {
@@ -2195,16 +2194,8 @@ h6 {
   body {
     font-size: 15px;
   }
-  .edrea_tm_header {
-    width: 1200px;
-  }
   .edrea_tm_header .header_inner {
-    padding-top: 30px;
-  }
-  .edrea_tm_content {
-    top: 80px;
-    bottom: 80px;
-    width: 1200px;
+    padding-top: 15px;
   }
   .edrea_tm_home .name {
     font-size: 55px;
@@ -2284,17 +2275,6 @@ h6 {
   }
   .edrea_tm_news .news_list .details {
     padding: 25px 20px 22px 20px;
-  }
-}
-
-@media (max-width: 1200px) {
-  .edrea_tm_header {
-    width: 1000px;
-  }
-  .edrea_tm_content {
-    top: 80px;
-    bottom: 80px;
-    width: 1000px;
   }
 }
 
@@ -2418,6 +2398,7 @@ h6 {
     margin-bottom: 20px;
   }
 }
+
 @media (max-width: 768px) {
   .edrea_tm_home .name {
     font-size: 40px;
