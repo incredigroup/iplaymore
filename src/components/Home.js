@@ -38,7 +38,6 @@ const Home = ({ activeWithBtn, route }) => {
               alt=""
               width="450px"
               height="285px"
-              // layout="fill"
             />
           </div>
           <h3 className="job">

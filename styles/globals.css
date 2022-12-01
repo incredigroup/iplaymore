@@ -288,11 +288,9 @@ canvas {
   .edrea_tm_content {
     width: 80%;
   }
-
   .flipbook {
     width: 60%;
   }
-
 }
 
 @media (max-width: 1400px) {
