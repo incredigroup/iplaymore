@@ -2,7 +2,8 @@ import { useContext , useEffect} from "react";
 import { context } from "../context/context";
 import AnimatedText from "./AnimatedText";
 import { useRouter } from "next/router";
-
+import Image from "next/image";
+// import Smoke from "./Smoke";
 
 const homeData = {
   lastName: "THUNDER! ©",
@@ -31,19 +32,20 @@ const Home = ({ activeWithBtn, route }) => {
     <div className="edrea_tm_section animated" id="home">
       <div className="section_inner">
         <div className="edrea_tm_home">
-          <h3 className="name">
-            <span className="coloring">{homeData.lastName}</span>
-          </h3>
+          <div className="home-thunder">
+            <Image 
+              src="/img/logo/thunder.png"
+              alt=""
+              width="450px"
+              height="285px"
+              // layout="fill"
+            />
+          </div>
           <h3 className="job">
             <AnimatedText />
           </h3>
-          {/* <div className="edrea_tm_button transition_link">
-            <a href="#contact" onClick={() => changeNav("contact")}>
-              Get in Touch
-            </a>
-          </div> */}
           <div className="edrea_tm_button"> 
-            <a href='#register' className="a" style={{width:'50%', marginTop: '20px'}} onClick={() => changeNav('register')}>Sign Up Play Early!</a>
+            <a href='#register' className="register_btn" onClick={() => changeNav('register')}>Sign Up To Play Early!</a>
           </div>
         </div>
       </div>

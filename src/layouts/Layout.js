@@ -9,7 +9,7 @@ import Header from "./Header";
 import MobileHeader from "./MobileHeader";
 import Mouse from "./Mouse";
 import PreLoader from "./PreLoader";
-import Settings from "./Settings";
+import Image from "next/image";
 
 const Layout = ({ children, route }) => {
   useEffect(() => {
@@ -23,7 +23,7 @@ const Layout = ({ children, route }) => {
   return (
     <State>
       <Head>
-        <link rel="icon" type="image/png" href="img/favicon.png" />
+        <link rel="icon" type="image/png" href="img/favicon.png" style={{width: "65px", height:"65px"}}/>
         <title>IPlayMore | Home</title>
 
         <link

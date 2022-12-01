@@ -1,3 +1,7 @@
+import { createContext, useReducer } from "react";
+import { activeSection } from "../utilits";
+import { ethers } from "ethers";
+
 const type = {
   NAV: "NAV",
   ACCOUNT: "ACCOUNT",
@@ -6,8 +10,6 @@ const type = {
   LOGINED: "LOGINED"
 };
 
-import { createContext, useReducer } from "react";
-import { activeSection } from "../utilits";
 const context = createContext();
 
 const reducer = (state, action) => {
@@ -122,6 +124,24 @@ const state = (props) => {
     });
   };
 
+  const connectMetaMask = () => {
+      if (window.ethereum) {
+      const provider = new ethers.providers.Web3Provider(window.ethereum);
+      var signer = provider.getSigner();
+      // setSanctionsSmartContract(SanctionsContract.connect(signer));
+      window.ethereum
+      .request({ method: "eth_requestAccounts" })
+      .then((res) => accountChangeHandler(res[0]));
+      } else {
+      // alert("install metamask extension!!");
+      storeAccount({account:'', extensionState: false})
+      }
+  };
+
+  const accountChangeHandler = (walletAddress) => {
+      storeAccount({account:walletAddress, extensionState: true})
+  };
+
   return (
     <context.Provider
       value={{
@@ -133,6 +153,7 @@ const state = (props) => {
         getColor: getColor,
         getMagicCursor: getMagicCursor,
         changeCursor: changeCursor,
+        connectMetaMask: connectMetaMask
       }}
     >
       {props.children}

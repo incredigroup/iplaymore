@@ -8,7 +8,18 @@ const nextConfig = {
       'localhost:3002',
       'i.ytimg.com'
     ],
-  }
+  },
+  webpack: (config) => {
+    config.resolve = {
+      ...config.resolve,
+      fallback: {
+        "fs": false,
+        "path": false,
+        "os": false,
+      }
+    }
+    return config
+  },
   // eslint: {
   //   dirs: ['pages', 'utils'],
   // },

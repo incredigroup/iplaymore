@@ -1,43 +1,21 @@
 import { useContext, useState, useEffect } from "react";
 import { context } from "../context/context";
-import { ethers } from "ethers";
 
 const Register = ( {route } ) => {
   const navContext = useContext(context);
-  const { account, storeAccount } = navContext;
+  const { account, connectMetaMask } = navContext;
   const [mailData, setMailData] = useState({ name: "", email: "", wallet: ""});
   const { name, email} = mailData;
   const [localState, setError] = useState({error: null, errorText: ''});
   
-  useEffect(() => {
-    connectMetaMask()
-  }, [])
-
-  const connectMetaMask = () => {
-    if (window.ethereum) {
-      const provider = new ethers.providers.Web3Provider(window.ethereum);
-      var signer = provider.getSigner();
-      // setSanctionsSmartContract(SanctionsContract.connect(signer));
-      window.ethereum
-      .request({ method: "eth_requestAccounts" })
-      .then((res) => accountChangeHandler(res[0]));
-    } else {
-      // alert("install metamask extension!!");
-      storeAccount({account:'', extensionState: false})
-    }
-  };
-
-  const accountChangeHandler = (walletAddress) => {
-    storeAccount({account:walletAddress, extensionState: true})
-    setMailData({ ...mailData, wallet: walletAddress});
-  };
-
   async function onSubmit(e) {
     e.preventDefault();
+    setMailData({ ...mailData, wallet: account});
     if (name.length === 0 || email.length === 0) {
       setError({...localState, error: true, errorText:"Please Fill Required Fields"});
     } else if (!account){
       setError({...localState, error: true, errorText:"Please Connect with MetaMask"});
+      connectMetaMask();
     } else {
       const res = await fetch('/api/user', {
         method: 'POST',
@@ -47,12 +25,11 @@ const Register = ( {route } ) => {
       const data = await res.json();
       if (res.status === 200) {
         setError({...localState, error: false, errorText:"Please Fill Required Fields"});
-        setMailData({ name: "", email: ""});
       } else if(res.status === 201) {
         setError({...localState, error: true, errorText:data.message});
       } else {
-        // console.log(err.text); 
       }
+      setMailData({ name: "", email: ""});
     }
     clearError();
   };
@@ -62,7 +39,6 @@ const Register = ( {route } ) => {
     }, 3000);
   };
 
-  console.log(localState.error);
   return (
     <div className="edrea_tm_section hidden animated" id="register">
       <div className="section_inner">

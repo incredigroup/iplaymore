@@ -3,6 +3,7 @@ import Register from "../src/components/Register";
 import Login from "../src/components/Login";
 import Home from "../src/components/Home";
 import Game from "../src/components/Game";
+import Comic from "../src/components/Comic";
 import Layout from "../src/layouts/Layout";
 import Bonfire from "../src/components/Bonfire";
 
@@ -13,10 +14,11 @@ const Index = ({ videosData, bonfireData }) => {
   return (
     <Layout>
       <Home />
-      <Videos data={videosData} />
       <Bonfire data={bonfireData}/>
+      <Comic/>
       <Game/>
       <Register />
+      <Videos data={videosData} />
       <Login />
     </Layout>
   );

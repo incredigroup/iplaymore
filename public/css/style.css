@@ -349,7 +349,7 @@ h6 {
 
 .edrea_tm_header {
   position: fixed;
-  width: 900px;
+  width: 80%;
   transform: translateX(-50%);
   left: 50%;
 }
@@ -358,17 +358,18 @@ h6 {
   height: auto;
   clear: both;
   float: left;
-  padding-top: 40px;
+  padding-top: 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 .edrea_tm_header .logo img {
-  max-width: 100px;
+  max-width: 250px;
 }
 .edrea_tm_header .menu ul {
   margin: 0px;
   list-style-type: none;
+  margin-right: 50px;
 }
 .edrea_tm_header .menu ul li {
   margin: 0px 30px 0px 0px;
@@ -402,11 +403,12 @@ h6 {
 
 .edrea_tm_content {
   position: fixed;
-  width: 1000px;
+  width: 60%;
   top: 100px;
-  bottom: 100px;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
+  margin-bottom: 20px;
 }
 .edrea_tm_section {
   position: absolute;
@@ -472,7 +474,6 @@ h6 {
 .edrea_tm_home .job {
   font-size: 25px;
   font-weight: 500;
-  color: #a2a2a2;
   margin-bottom: 40px;
 }
 .edrea_tm_home .job b {
@@ -2194,16 +2195,8 @@ h6 {
   body {
     font-size: 15px;
   }
-  .edrea_tm_header {
-    width: 800px;
-  }
   .edrea_tm_header .header_inner {
-    padding-top: 30px;
-  }
-  .edrea_tm_content {
-    top: 80px;
-    bottom: 80px;
-    width: 800px;
+    padding-top: 15px;
   }
   .edrea_tm_home .name {
     font-size: 55px;
@@ -2285,6 +2278,7 @@ h6 {
     padding: 25px 20px 22px 20px;
   }
 }
+
 @media (max-width: 1040px) {
   .mouse-cursor {
     display: none;
@@ -2301,7 +2295,6 @@ h6 {
   .edrea_tm_content {
     width: 100%;
     top: 70px;
-    bottom: 70px;
   }
   .edrea_tm_home {
     padding: 0px 20px;
@@ -2405,6 +2398,7 @@ h6 {
     margin-bottom: 20px;
   }
 }
+
 @media (max-width: 768px) {
   .edrea_tm_home .name {
     font-size: 40px;

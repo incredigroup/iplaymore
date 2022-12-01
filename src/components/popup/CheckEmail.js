@@ -39,7 +39,7 @@ const CheckEmail = ({ open, close, checkUser, errorMessage }) => {
                         />
                       </div>
                       <div className="edrea_tm_button"> 
-                        <a href='#register' className="a" style={{width:'50%', marginTop: '20px'}} onClick={() => checkUser(email)}>Continue</a>
+                        <a href='#register' className="register_btn" onClick={() => checkUser(email)}>Continue</a>
                       </div>
                     </div>
                   </div>
