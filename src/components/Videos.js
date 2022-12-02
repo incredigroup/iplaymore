@@ -9,7 +9,7 @@ const Videos = ( { data } ) => {
   console.log('data = ', data)
   return (
     <Fragment>
-      <PortfolioModal open={modal} close={() => setModal(false)} />
+      {/* <PortfolioModal open={modal} close={() => setModal(false)} /> */}
       <div className="edrea_tm_section hidden animated" id="videos">
         <div className="section_inner">
           <div className="edrea_tm_portfolio swiper-section">

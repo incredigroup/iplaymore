@@ -45,8 +45,8 @@ const Header = ( {route} ) => {
             </li>
             <li className={activeNav("comic")}>
               <a href="#comic" onClick={() => changeNav("comic")}>
-                Comic
-              </a>
+                comic
+              </a> 
             </li>
             <li className={activeNav("game")}>
               <a href="#game" onClick={() => changeNav("game")}>
@@ -55,25 +55,24 @@ const Header = ( {route} ) => {
             </li>
             <li className={activeNav("novel")}>
               <a href="#novel" onClick={() => changeNav("novel")}>
-                Novel
-              </a>
-            </li>
+                Novel 
+               </a> 
+             </li> 
             <li className={activeNav("music")}>
               <a href="#music" onClick={() => changeNav("music")}>
                 Music
               </a>
             </li>
-            <li className={activeNav("marketplace")}>
-              <a href="#marketplace" onClick={() => changeNav("marketplace")}>
-                Marketplace
-              </a>
-            </li>
+             <li className={activeNav("marketplace")}>
+               <a href="#marketplace" onClick={() => changeNav("marketplace")}>
+                 Marketplace
+               </a>
+             </li>
             <li className={activeNav("videos")}>
               <a href="#videos" onClick={() => changeNav("videos")}>
                 Videos
               </a>
             </li>
-
             {logined?
             <li class="dropbox">
               <div class="dropdown">

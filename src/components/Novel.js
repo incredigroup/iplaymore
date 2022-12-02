@@ -2,30 +2,27 @@ import React, { Fragment, useState, useEffect, useRef } from "react";
 import HTMLFlipBook from "react-pageflip";
 import Image from "next/image";
 import useSWR from 'swr';
-import PageCover from "./cover/PageCover";
-import Page from "./cover/page";
 
-
-const Comic = () => {
+const Novel = () => {
     const [page, setPage] = useState(0);
-    const [totalPage, setTotalPage] = useState(0);
     const book = useRef();
 
     const fetcher = (url) => fetch(url).then((res) => res.json());
-    const { data }= useSWR('/api/readfiles?menu=comic', fetcher);
-    const number = eval(JSON.stringify(data));
+    const { data }= useSWR('/api/readfiles?menu=novel', fetcher);
+    const number = parseInt(JSON.stringify(data));
+
     const onPage = (e) => {
         setPage(e.data);
     };
 
     return (
         <Fragment>
-        <div className="edrea_tm_section hidden animated" id="comic">
+        <div className="edrea_tm_section hidden animated" id="novel">
             <div className="section_inner">
                 <div className="edrea_tm_portfolio swiper-section">
                     <div className="edrea_tm_main_title">
                     <h3>
-                        THUNDER! ©<span className="coloring">Comic</span>
+                        THUNDER! ©<span className="coloring">Novel</span>
                     </h3>
                     </div>
                     <div className="portfolio_list gallery_zoom comic-container">
@@ -49,7 +46,7 @@ const Comic = () => {
                                 {(() => {
                                     const pages = [];
                                     for(let i = 1; i <= number; i++){
-                                        let url = "/files/comic/" + i + ".jpg";
+                                        let url = "/files/novel/" + i + ".jpg";
                                         if(i === 1) {
                                             pages.push(
                                                 <div className="demopage">
@@ -92,7 +89,7 @@ const Comic = () => {
                                 <div>
                                     <button className="btn-pagination" onClick={() =>book.current.pageFlip().flipPrev()}>Previous page</button>
                                     [<span> {page} </span> of
-                                    <span> {number - 2} </span>]
+                                    <span> {number-2} </span>]
                                     <button className="btn-pagination" onClick={() =>book.current.pageFlip().flipNext()}>Next page</button>
                                 </div>
                                 <div>
@@ -108,5 +105,32 @@ const Comic = () => {
     );
 };
 
-export default Comic;
+
+// const pageCover = ({ fileName }) => {
+//     const url = "./files/" + {fileName};
+//     return (
+//         <div className="coveraa">
+//             <Image 
+//                 src={url}
+//                 alt=""
+//                 layout="fill"
+//             />
+//         </div>
+//     );
+// };
+
+// const Page = React.forwardRef((props, ref) => {
+//     return (
+//         <div className="page" ref={ref}>
+//         <div className="page-content">
+//             <h2 className="page-header">Page header - {props.number}</h2>
+//             <div className="page-image"></div>
+//             <div className="page-text">{props.children}</div>
+//             <div className="page-footer">{props.number + 1}</div>
+//         </div>
+//         </div>
+//     );
+// });
+
+export default Novel;
 

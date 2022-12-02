@@ -288,9 +288,11 @@ canvas {
   .edrea_tm_content {
     width: 80%;
   }
+
   .flipbook {
     width: 60%;
   }
+
 }
 
 @media (max-width: 1400px) {
@@ -322,6 +324,9 @@ canvas {
   .flipbook {
     width: 90%;
   }
+  .coloring {
+    font-size: 55px;
+  }
 }
 
 @media (max-width: 1040px) {
@@ -334,6 +339,9 @@ canvas {
   .flipbook {
     width: 100%;
   }
+  .coloring {
+    font-size: 50px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -342,6 +350,9 @@ canvas {
   }
   .button label {
     font-size: 12px;
+  }
+  .coloring {
+    font-size: 40px;
   }
 }
 
@@ -355,5 +366,8 @@ canvas {
   
   .btn-pagination {
     width: 100%;
+  }
+  .coloring {
+    font-size: 30px;
   }
 }
