@@ -45,7 +45,7 @@ const Header = ( {route} ) => {
             </li>
             <li className={activeNav("comic")}>
               <a href="#comic" onClick={() => changeNav("comic")}>
-                comic
+                Comic
               </a> 
             </li>
             <li className={activeNav("game")}>
