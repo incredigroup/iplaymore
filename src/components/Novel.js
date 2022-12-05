@@ -1,7 +1,4 @@
-import React, { Fragment, useState, useRef } from "react";
-import HTMLFlipBook from "react-pageflip";
-import Image from "next/image";
-import useSWR from 'swr';
+import React, { Fragment } from "react";
 import Book from './cover/book';
 
 const Novel = () => {

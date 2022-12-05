@@ -6,6 +6,7 @@
 
 # next js
 .next/
+yarn.lock
 
 .env
 .env.local

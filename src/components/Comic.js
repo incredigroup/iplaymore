@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useEffect, useRef } from "react";
+import React, { Fragment } from "react";
 import Book from './cover/book';
 
 const Comic = () => {
