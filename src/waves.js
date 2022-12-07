@@ -233,7 +233,6 @@ export const waves = () => {
       if (gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
         return shader;
       } else {
-        console.log(gl.getShaderInfoLog(shader));
         gl.deleteShader(shader);
       }
     }
@@ -254,7 +253,6 @@ export const waves = () => {
         gl.useProgram(program);
         this.program = program;
       } else {
-        console.log(gl.getProgramInfoLog(program));
         gl.deleteProgram(program);
       }
     }

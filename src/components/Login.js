@@ -41,7 +41,6 @@ const Register = ( {route } ) => {
             changeNav("home");
             setPopup(false);
             setMessage('');
-            // web3.eth.personal.sign("web3.fromUtf8(name)", web3.eth.coinbase, console.log);
         } else {
             const data = await res.json();
             // if(setType == 'email') {

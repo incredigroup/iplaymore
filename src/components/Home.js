@@ -17,7 +17,6 @@ const Home = ({ activeWithBtn, route }) => {
   useEffect(() => {
     if (route === 'bonfire') {
       changeNav('bonfire');
-      console.log('route from header = ', route);
 
       // set href to bonfire
       activeSection('bonfire');
@@ -25,8 +24,6 @@ const Home = ({ activeWithBtn, route }) => {
 
     }
   }, []);
-
-  console.log('route from home = ', route);
 
   return (
     <div className="edrea_tm_section animated" id="home">

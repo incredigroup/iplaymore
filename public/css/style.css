@@ -408,7 +408,7 @@ h6 {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 }
 .edrea_tm_section {
   position: absolute;
@@ -601,7 +601,7 @@ h6 {
   top: 0px;
   left: 0px;
   right: 0px;
-  height: 100vh;
+  height: 100%;
   z-index: 20;
   background-color: rgba(0, 0, 0, 1);
   opacity: 0;
@@ -619,9 +619,9 @@ h6 {
 }
 .edrea_tm_modalbox .box_inner {
   position: absolute;
-  top: 70px;
-  bottom: 70px;
-  width: 800px;
+  top: 20px;
+  bottom: 10px;
+  width: 95%;
   left: 50%;
   border-radius: 10px;
   transform: translateX(-50%);
@@ -638,6 +638,7 @@ h6 {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
+
 .edrea_tm_modalbox.opened .box_inner {
   opacity: 1;
   visibility: visible;
@@ -687,7 +688,7 @@ h6 {
 .edrea_tm_modalbox .description_wrap:before {
   position: fixed;
   content: "";
-  top: 0px;
+  top: -1px;
   left: 0px;
   right: 0px;
   height: 50px;
@@ -699,7 +700,7 @@ h6 {
 .edrea_tm_modalbox .description_wrap:after {
   position: fixed;
   content: "";
-  bottom: 0px;
+  bottom: -1px;
   left: 0px;
   right: 0px;
   height: 50px;
@@ -1390,7 +1391,7 @@ h6 {
   height: auto;
   clear: both;
   float: left;
-  padding-top: 60px;
+  padding-top: 20px;
 }
 .edrea_tm_portfolio .portfolio_list .list_inner {
   width: 100%;
@@ -2224,10 +2225,17 @@ h6 {
     margin-bottom: 30px;
   }
   .edrea_tm_modalbox .box_inner {
-    width: 700px;
-    top: 35px;
-    bottom: 35px;
+    width: 80%;
+    top: 20px;
+    bottom: 20px;
   }
+
+  .edrea_tm_modalbox .box_inner_game {
+    width: 50%;
+    top: 20px;
+    bottom: 20px;
+  }
+
   .edrea_tm_modalbox .close {
     margin-left: 20px;
   }
@@ -2238,9 +2246,9 @@ h6 {
   .edrea_tm_modalbox .about_popup_details .left {
     width: 35%;
   }
-  .edrea_tm_modalbox .about_popup_details .right {
+  /* .edrea_tm_modalbox .about_popup_details .right {
     padding-left: 35%;
-  }
+  } */
   .edrea_tm_modalbox .about_popup_details .left .left_inner {
     padding: 30px 25px;
   }
@@ -2266,7 +2274,7 @@ h6 {
     padding-top: 50px;
   }
   .edrea_tm_portfolio .portfolio_list {
-    padding-top: 50px;
+    padding-top: 20px;
   }
   .edrea_tm_news .news_list {
     padding-top: 50px;

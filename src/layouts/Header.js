@@ -4,20 +4,13 @@ import Image from 'next/image';
 
 const Header = ( {route} ) => {
   const navContext = useContext(context);
-  const { nav, changeNav, logined, logStatus, username, account } = navContext;
-
-
-  useEffect(() => {
-    console.log(nav);
-  }, [nav]);
-
-
-
+  const { nav, changeNav, logined, logStatus, account } = navContext;
   const activeNav = (value) => (value == nav ? "active" : "");
   const logout = () => {
     logStatus({username: '', status:false});
     changeNav('home');
   }
+  
   return (
     <div className="edrea_tm_header">
       <div className="header_inner">

@@ -43,7 +43,6 @@ export const customCursor = () => {
         i = 0,
         o = !1;
       (window.onmousemove = function (s) {
-        // console.log(document.querySelector(this));
         o ||
           (t.style.transform =
             "translate(" + s.clientX + "px, " + s.clientY + "px)"),
@@ -163,7 +162,6 @@ export const activeSkillProgress = () => {
       boxItem = boxElement[0],
       pWidth = box.getAttribute("data-value"),
       pColor = box.getAttribute("data-color");
-    console.log(boxElement);
     if (boxTop < triggerBottom) {
       boxItem.classList.add("open");
       label[0].classList.add("opened");

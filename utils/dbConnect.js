@@ -19,7 +19,6 @@ if (!cached) {
 }
 
 async function dbConnect() {
-  console.log('dbConnect Fired');
   if (cached.conn) {
     return cached.conn;
   }

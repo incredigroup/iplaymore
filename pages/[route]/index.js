@@ -14,7 +14,6 @@ const Index = ({ videosData, bonfireData}) => {
   
 
   const { route } = router.query
-  console.log('route = ', route)
   return (
     <Layout >
       <Home route={route}/>

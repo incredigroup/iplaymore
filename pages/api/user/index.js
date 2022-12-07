@@ -21,7 +21,6 @@ export default async function handler(
             {email: email}
           ]
         })
-        console.log(exsitingUser);
         if(_.isEmpty(exsitingUser)) {
           
           name = startCase(name)
@@ -29,11 +28,9 @@ export default async function handler(
           const user = await User.create({wallet,name, email, route, created_at});
           return res.status(200).json({ success: true, message: 'Success', user: user});
         } else {
-          console.log("not user");
           return res.status(201).json({ success: true, message: 'Already Registered User', user: exsitingUser });
         }
       // } catch (error) {
-      //   console.log(error.message)
       //   res.status(400).json({ success: false, message: error.message });
       // }
       break;

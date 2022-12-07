@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import Book from './cover/book';
+import Book from './cover/Book';
 
 const Comic = () => {
     return (

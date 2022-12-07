@@ -6,7 +6,6 @@ import Image from 'next/image'
 
 const Videos = ( { data } ) => {
   const [modal, setModal] = useState(false);
-  console.log('data = ', data)
   return (
     <Fragment>
       {/* <PortfolioModal open={modal} close={() => setModal(false)} /> */}
