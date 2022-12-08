@@ -339,7 +339,7 @@ canvas {
   }
 
   .flipbook {
-    width: 60%;
+    width: 70%;
   }
 }
 
@@ -355,7 +355,7 @@ canvas {
   }
 
   .flipbook {
-    width: 70%;
+    width: 75%;
   }
 
 }
@@ -405,12 +405,16 @@ canvas {
 
 }
 
-@media (max-width: 1040px) {
+@media (max-width: 1024px) {
+  body {
+    font-size: 10px;
+  }
   .about_title {
     margin-top: 30px;
   }
   .edrea_tm_content {
     z-index: 99;
+    width: 100%;
   }
   .flipbook {
     width: 100%;
@@ -421,6 +425,7 @@ canvas {
   .game-animation .link-title {
     font-size: 24px;
   }
+
 }
 
 @media (max-width: 768px) {
@@ -434,15 +439,30 @@ canvas {
     font-size: 40px;
   }
 
+}
+
+@media (max-width: 767px) {
+  .btn-pagination {
+    margin: 0;
+  }
+
+  .demopage {
+    padding: 0 0 20px 0;
+    box-shadow: none !important;
+  }
+
   .aboutgame {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     overflow: auto;
+    margin: 0 7px;
   }
 
   .aboutgame .game-animation {
+    position: absolute;
+    top: 100%;
     width: 100%;
     left: 0;
     padding: 0 10px;
@@ -451,11 +471,6 @@ canvas {
   .aboutgame .inner_game {
     width: 100%;
     transform: translateX(-50%);
-  }
-
-  .aboutgame .game-animation {
-    position: absolute;
-    top: 100%;
   }
 
 }

@@ -11,7 +11,6 @@ const AboutGame = ({ open, close }) => {
   });
   const handleSignup = () => {
     changeNav("register");
-    close();
   };
 
   return (

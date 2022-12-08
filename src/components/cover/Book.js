@@ -36,7 +36,7 @@ const Book = ({ menu }) => {
                         const pages= [];
                         data && data.map((one, key) => {
                             const url = one.replace(/\\/g, "/");
-                            if(key <= 1 || key == data.length - 1) {
+                            if(key < 1 || key == data.length - 1) {
                                 pages.push(
                                     <div key={key} className="demopage">
                                         <Image 
@@ -56,7 +56,7 @@ const Book = ({ menu }) => {
                                                 layout="fill"
                                             />
                                         </div>
-                                        <div className="page-footer">- {key - 1} -</div>
+                                        <div className="page-footer">- {key} -</div>
                                     </div>
                                 );
                             }
@@ -65,14 +65,10 @@ const Book = ({ menu }) => {
                     })()}
                 </HTMLFlipBook>
                 <div className="comic-pagination">
-                    <div>
-                        <button className="btn-pagination" onClick={() =>book.current.pageFlip().flipPrev()}>Previous page</button>
-                        [<span> {page} </span> of
-                        <span> {number-2} </span>]
-                        <button className="btn-pagination" onClick={() =>book.current.pageFlip().flipNext()}>Next page</button>
-                    </div>
-                    <div>
-                    </div>
+                    <button className="btn-pagination" onClick={() =>book.current.pageFlip().flipPrev()}>Previous page</button>
+                    [<span> {page} </span> of
+                    <span> {number-1} </span>]
+                    <button className="btn-pagination" onClick={() =>book.current.pageFlip().flipNext()}>Next page</button>
                 </div>
             </div>
         </div>
