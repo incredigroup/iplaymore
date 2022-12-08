@@ -33,7 +33,7 @@ body {
   overflow-x: hidden;
   width: 100%;
   font-family: "Mulish";
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.2px;
   word-wrap: break-word;
@@ -854,7 +854,7 @@ h6 {
   clear: both;
   float: left;
   position: relative;
-  padding: 50px 40px;
+  padding: 50px 20px;
 }
 .edrea_tm_modalbox .about_popup_details .biography {
   width: 100%;
