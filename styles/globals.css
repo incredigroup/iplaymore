@@ -323,6 +323,10 @@ canvas {
   line-height: 100%;
 }
 
+.stf__parent {
+  transform: none !important;
+}
+
 @media (min-width: 1600px) {
   .edrea_tm_header .menu ul li a {
     font-size: 24px;
