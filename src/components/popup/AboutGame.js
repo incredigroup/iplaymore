@@ -17,10 +17,16 @@ const AboutGame = ({ open, close }) => {
       <div className={`edrea_tm_modalbox aboutgame ${open ? "opened" : ""}`} ref={domNode}>
         <div className="game-animation">
           <div className="logo">
-            <Image src="/img/logo/iplaymore_logo.png"
+            {/* <Image src="/img/logo/iplaymore_logo.png"
               alt=""
               width="256px"
-              height="58px" />
+              height="58px" /> */}
+              {/* <Image 
+              src="/img/logo/thunder.png"
+              alt=""
+              width="90px"
+              height="60px"
+            /> */}
           </div>
           <div className="gif-area">
             <Image src="/img/aboutgame.gif" layout="fill"/>    

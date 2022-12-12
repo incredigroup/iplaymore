@@ -3,19 +3,20 @@ import Image from 'next/image';
 import HTMLFlipBook from "react-pageflip";
 import useSWR from 'swr';
 
-const Book = ({ menu }) => {
+const Book = (props) => {
     const [page, setPage] = useState(0);
     const book = useRef();
-
     const fetcher = (url) => fetch(url).then((res) => res.json());
-    const { data }= useSWR('/api/readfiles?menu=' + menu, fetcher);
+    const { data }= useSWR('/api/readfiles?menu=' + props.menu, fetcher);
     const number = data && data.length;
     const onPage = (e) => {
         setPage(e.data);
     };
+
     return (
-        <div className="portfolio_list gallery_zoom comic-container">
-            <div className="flipbook">
+        <>
+        <div className="portfolio_list gallery_zoom comic-container" style={{marginTop: props.marginTop}}>
+            <div className="flipbook" onDoubleClick={props.zoomIn} style={{'transform': `scale(${props.scale})`}}>
                 <HTMLFlipBook
                     width={350}
                     height={500}
@@ -64,14 +65,17 @@ const Book = ({ menu }) => {
                         return pages;
                     })()}
                 </HTMLFlipBook>
-                <div className="comic-pagination">
-                    <button className="btn-pagination" onClick={() =>book.current.pageFlip().flipPrev()}>Previous page</button>
-                    [<span> {page} </span> of
-                    <span> {number-1} </span>]
-                    <button className="btn-pagination" onClick={() =>book.current.pageFlip().flipNext()}>Next page</button>
-                </div>
             </div>
         </div>
+        <div className="handle-flip" style={{top: props.top}}>
+            <div className="comic-pagination">
+                <button className="btn-pagination" onClick={() =>book.current.pageFlip().flipPrev()}>Previous page</button>
+                [<span> {page} </span> of
+                <span> {number-1} </span>]
+                <button className="btn-pagination" onClick={() =>book.current.pageFlip().flipNext()}>Next page</button>
+            </div>
+        </div>
+        </>
     );
 };
 
