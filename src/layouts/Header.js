@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { context } from "../context/context";
 import Image from 'next/image';
 
@@ -19,8 +19,8 @@ const Header = ( {route} ) => {
             <Image 
               src="/img/logo/iplaymore_logo.png"
               alt=""
-              width="256px"
-              height="58px"
+              layout="fill"
+              objectFit="cover"
             />
           </a>
         </div>

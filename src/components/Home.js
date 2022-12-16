@@ -1,4 +1,4 @@
-import { useContext , useEffect} from "react";
+import { useContext} from "react";
 import { context } from "../context/context";
 import AnimatedText from "./AnimatedText";
 import Image from "next/image";
@@ -6,7 +6,6 @@ import Image from "next/image";
 const Home = ({ route }) => {
   const navContext = useContext(context);
   const { changeNav } = navContext;
-
   return (
     <div className="edrea_tm_section animated" id="home">
       <div className="section_inner">
@@ -15,8 +14,8 @@ const Home = ({ route }) => {
             <Image 
               src="/img/logo/thunder.png"
               alt=""
-              width="450px"
-              height="285px"
+              layout="fill"
+              objectFit="cover"
             />
           </div>
           <h3 className="job">

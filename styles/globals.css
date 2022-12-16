@@ -351,12 +351,22 @@ canvas {
   width:100% !important;
   height: auto;
 }
-
-/* .logo {
+.edrea_tm_home {
+  display: grid;
+}
+.home-thunder {
   position: relative;
-  width: 20%;
-  height: auto;
-} */
+  width: 450px;
+  height: 285px;
+  place-self: center;
+}
+
+.logo {
+  position: relative;
+  width: 220px;
+  height: 50px;
+}
+
 @media (min-width: 1920px) {
   body {
     font-size: 18px;
@@ -365,9 +375,21 @@ canvas {
   .aboutgame {
     margin: 50px 100px;
   }
+
+  .home-thunder {
+    width: 615px;
+    height: 390px;
+  }
+  .logo {
+    width: 440px;
+    height: 100px;
+  }
+  .edrea_tm_content {
+    width: 70%;
+  }
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1600px) and (max-width: 1920px) {
   body {
     font-size: 16px;
   }
@@ -390,9 +412,18 @@ canvas {
   .aboutgame {
     height: 95%;
   }
+  .home-thunder {
+    width: 560px;
+    height: 355px;
+  }
+  .logo {
+    width: 330px;
+    height: 75px;
+  }
 }
 
 @media (min-width: 1400px) and (max-width: 1600px) {
+
   .edrea_tm_header .menu ul li a {
     font-size: 20px;
   }
@@ -402,7 +433,11 @@ canvas {
   .edrea_tm_content {
     width: 80%;
   }
-
+  .home-thunder {
+    width: 450px;
+    height: 285px;
+  }
+  
 }
 
 @media (max-width: 1400px) {
