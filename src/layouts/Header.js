@@ -10,11 +10,11 @@ const Header = ( {route} ) => {
     logStatus({username: '', status:false});
     changeNav('home');
   }
-  
+
   return (
     <div className="edrea_tm_header">
       <div className="header_inner">
-        <div className="logo">
+        <div className="logo header-logo">
           <a href="#home" onClick={() => changeNav("home")}>
             <Image 
               src="/img/logo/iplaymore_logo.png"
