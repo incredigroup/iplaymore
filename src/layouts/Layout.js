@@ -62,9 +62,7 @@ const Layout = ({ children, route }) => {
         <Header route={route}/>
         {/* /HEADER */}
         {/* CONTENT */}
-        <div className="edrea_tm_content">
-            {children}
-        </div>
+        <div className="edrea_tm_content">{children}</div>
         {/* /CONTENT */}
         {/* MAGIC CURSOR */}
         <Mouse />

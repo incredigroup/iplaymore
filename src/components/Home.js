@@ -1,11 +1,29 @@
 import { useContext , useEffect} from "react";
 import { context } from "../context/context";
 import AnimatedText from "./AnimatedText";
+import { useRouter } from "next/router";
 import Image from "next/image";
+// import Smoke from "./Smoke";
 
-const Home = ({ route }) => {
+const homeData = {
+  lastName: "THUNDER! ©",
+};
+
+const Home = ({ activeWithBtn, route }) => {
+  const router = useRouter()
   const navContext = useContext(context);
   const { changeNav } = navContext;
+
+  useEffect(() => {
+    if (route === 'bonfire') {
+      changeNav('bonfire');
+
+      // set href to bonfire
+      activeSection('bonfire');
+
+
+    }
+  }, []);
 
   return (
     <div className="edrea_tm_section animated" id="home">
@@ -17,6 +35,7 @@ const Home = ({ route }) => {
               alt=""
               width="450px"
               height="285px"
+              // layout="fill"
             />
           </div>
           <h3 className="job">

@@ -206,17 +206,14 @@ canvas {
 }
 
 .comic-container {
-  position: relative;
-  display: grid;
+  display:flex;
+  justify-content: center;
 }
 
-.book-area {
-  position: relative;
-  width: 75%;
+.flipbook {
+  width: 80%;
   z-index: 9;
   text-align: center;
-  overflow: hidden;
-  place-self: center;
 }
 
 .iplaymorecomic {
@@ -316,7 +313,7 @@ canvas {
 }
 
 .aboutgame {
-  margin: 20px 100px;
+  margin: 0 100px;
 }
 
 .teaser {
@@ -347,30 +344,11 @@ canvas {
   z-index: 999;
 }
 
-.transform-component-module_content__2jYgh, .transform-component-module_wrapper__1_Fgj {
-  width:100% !important;
-  height: auto;
-}
-
-/* .logo {
-  position: relative;
-  width: 20%;
-  height: auto;
-} */
-@media (min-width: 1920px) {
-  body {
-    font-size: 18px;
-  } 
-
-  .aboutgame {
-    margin: 50px 100px;
-  }
+.zoom svg {
+  margin: 0 5px;
 }
 
 @media (min-width: 1600px) {
-  body {
-    font-size: 16px;
-  }
   .edrea_tm_header .menu ul li a {
     font-size: 24px;
   }
@@ -384,12 +362,7 @@ canvas {
   .edrea_tm_header .header_inner {
     padding-top: 45px;
   }
-  .checkemail {
-    margin-top: 200px;
-  }
-  .aboutgame {
-    height: 95%;
-  }
+
 }
 
 @media (min-width: 1400px) and (max-width: 1600px) {
@@ -464,15 +437,11 @@ canvas {
   .game-animation .link-title {
     font-size: 24px;
   }
+  .zoom {
+    display: none;
+  }
   .handle-flip {
     bottom: 0px !important;
-  }
-  .book-area {
-    width: 95%;
-  }
-
-  .zoom-icon {
-    display: none;
   }
 }
 
@@ -495,12 +464,10 @@ canvas {
 }
 
 @media (max-width: 767px) {
-  .edrea_tm_mobile_menu .menu_list ul li {
-    font-size: 16px;
-  }
   .btn-pagination {
     margin: 0;
   }
+
   .demopage {
     padding: 0 0 20px 0;
     box-shadow: none !important;
@@ -526,10 +493,6 @@ canvas {
   .aboutgame .inner_game {
     width: 100%;
     transform: translateX(-50%);
-  }
-
-  .zoom {
-    margin-top: 10px;
   }
 
 }

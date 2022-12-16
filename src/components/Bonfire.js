@@ -14,7 +14,7 @@ const Bonfire = ( { data } ) => {
           <div className="edrea_tm_portfolio swiper-section">
             <div className="edrea_tm_main_title">
               <h3>
-                THUNDER! ©<span className="coloring"> Bonfire Stories</span>
+                THUNDER! ©<span className="coloring">Bonfire Stories</span>
               </h3>
             </div>
             <div className="portfolio_list gallery_zoom">
