@@ -700,7 +700,7 @@ h6 {
 .edrea_tm_modalbox .description_wrap:after {
   position: fixed;
   content: "";
-  bottom: -1px;
+  bottom: -3px;
   left: 0px;
   right: 0px;
   height: 50px;
