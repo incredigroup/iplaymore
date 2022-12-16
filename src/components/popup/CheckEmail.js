@@ -8,7 +8,7 @@ const CheckEmail = ({ open, close, checkUser, errorMessage }) => {
   });
   return (
     <Fragment>
-      <div className={`edrea_tm_modalbox ${open ? "opened" : ""} email_modalbox`}>
+      <div className={`edrea_tm_modalbox ${open ? "opened" : ""} email_modalbox checkemail`}>
         <div className="box_inner" ref={domNode}>
           <div className="close">
             <a href="#" onClick={() => close()}>
