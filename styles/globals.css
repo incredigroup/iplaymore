@@ -375,10 +375,10 @@ canvas {
   body {
     font-size: 22px !important;
   } 
-  .header-logo {
+  /* .header-logo {
     width: 440px !important;
     height: 100px !important;
-  }
+  } */
 
   .edrea_tm_header .menu ul li a {
     font-size: 26px !important;
@@ -398,10 +398,10 @@ canvas {
     width: 615px;
     height: 380px;
   }
-  .header-logo {
+  /* .header-logo {
     width: 440px;
     height: 100px;
-  }
+  } */
 }
 
 @media (min-width: 1600px) {
