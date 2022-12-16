@@ -45,7 +45,7 @@ const Register = ( {route } ) => {
         <div className="edrea_tm_contact">
           <div className="edrea_tm_main_title">
             <h3>
-              Register to <span className="coloring">iPlayMore</span>
+              Register to <span className="coloring"> iPlayMore</span>
             </h3>
           </div>
           <div className="wrapper">

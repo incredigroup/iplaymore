@@ -620,7 +620,7 @@ h6 {
 .edrea_tm_modalbox .box_inner {
   position: absolute;
   top: 20px;
-  bottom: 10px;
+  bottom: 20px;
   width: 95%;
   left: 50%;
   border-radius: 10px;
@@ -2274,7 +2274,7 @@ h6 {
     padding-top: 50px;
   }
   .edrea_tm_portfolio .portfolio_list {
-    padding-top: 20px;
+    /* padding: 30px 0; */
   }
   .edrea_tm_news .news_list {
     padding-top: 50px;
