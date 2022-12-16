@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { context } from "../context/context";
 import Image from 'next/image';
-
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 const Header = ( {route} ) => {
   const navContext = useContext(context);
   const { nav, changeNav, logined, logStatus, account } = navContext;
@@ -70,7 +70,7 @@ const Header = ( {route} ) => {
             <li class="dropbox">
               <div class="dropdown">
                 <a href="#">
-                  My Account
+                  <AccountCircleIcon fontSize="large" className="accounticon"></AccountCircleIcon>
                 </a>
                 <div class="dropdown-content" onClick={() => logout()}>
                   <label>{account.substr(0, 5)}...{account.substr(-4, 4)}</label>

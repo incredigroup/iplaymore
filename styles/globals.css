@@ -141,6 +141,10 @@ img.mfp-img {
   width: 100px;
 }
 
+.accounticon {
+  margin-top: -5px;
+}
+
 .dropdown {
   position: relative;
   display: inline-block;
@@ -367,10 +371,6 @@ canvas {
   height: 50px;
 }
 
-.edrea_tm_section#comic, .edrea_tm_section#novel {
-  top: 40px;
-}
-
 @media (min-width: 2100px) {
   body {
     font-size: 22px !important;
@@ -434,6 +434,9 @@ canvas {
   .header-logo {
     width: 330px;
     height: 75px;
+  }
+  .edrea_tm_section#comic, .edrea_tm_section#novel {
+    top: 40px;
   }
 }
 
