@@ -367,6 +367,10 @@ canvas {
   height: 50px;
 }
 
+.edrea_tm_section#comic, .edrea_tm_section#novel {
+  top: 40px;
+}
+
 @media (min-width: 2100px) {
   body {
     font-size: 22px !important;
