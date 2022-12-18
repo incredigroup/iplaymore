@@ -1,5 +1,7 @@
 import { useContext, useState, useEffect } from "react";
 import { context } from "../context/context";
+import Checkbox from '@mui/material/Checkbox';
+import FormControlLabel from '@mui/material/FormControlLabel';
 
 const Register = ( {route } ) => {
   const navContext = useContext(context);
@@ -7,13 +9,16 @@ const Register = ( {route } ) => {
   const [mailData, setMailData] = useState({ name: "", email: "", wallet: ""});
   const { name, email} = mailData;
   const [localState, setError] = useState({error: null, errorText: ''});
+  const [isChecked, setMetaMask] = useState(false);
   
   async function onSubmit(e) {
     e.preventDefault();
-    setMailData({ ...mailData, wallet: account});
+    if(isChecked) {
+      setMailData({ ...mailData, wallet: account});
+    }
     if (name.length === 0 || email.length === 0) {
       setError({...localState, error: true, errorText:"Please Fill Required Fields"});
-    } else if (!account){
+    } else if (!account && isChecked){
       setError({...localState, error: true, errorText:"Please Connect with MetaMask"});
       connectMetaMask();
     } else {
@@ -33,12 +38,17 @@ const Register = ( {route } ) => {
     }
     clearError();
   };
+
+  const handleMetaMask = (e) => {
+    setMetaMask(e.target.checked);
+  }
+
   const clearError = () => {
     setTimeout(() => {
       setError({...localState, error: null, errorText:""});
     }, 3000);
   };
-
+  
   return (
     <div className="edrea_tm_section hidden animated" id="register">
       <div className="section_inner">
@@ -89,6 +99,17 @@ const Register = ( {route } ) => {
                         </div>
                       </li>
                       <li>
+                        <FormControlLabel
+                          value="end"
+                          control={<Checkbox onChange={(e)=>handleMetaMask(e)}/>}
+                          label="Have already MetaMask?"
+                          labelPlacement="end"
+                          style={{boderColor: '#fff'}}
+                          color="default"
+                        />
+                      </li>
+                      {isChecked?
+                      <li>
                         <div className="list_inner">
                           <input
                             id="wallet"
@@ -99,7 +120,8 @@ const Register = ( {route } ) => {
                             disabled
                           />
                         </div>
-                      </li>
+                      </li>:''
+                      }
                     </ul>
                   </div>
                   <div className="edrea_tm_button">

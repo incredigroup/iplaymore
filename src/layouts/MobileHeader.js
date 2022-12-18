@@ -5,7 +5,7 @@ import Image from "next/image";
 const MobileHeader = () => {
   const [toggle, setToggle] = useState(false);
   const navContext = useContext(context);
-  const { nav, changeNav, logined, logStatus, username, account } = navContext;
+  const { nav, changeNav, logined, logStatus, username } = navContext;
 
   const activeNav = (value) => (value == nav ? "active" : "");
   const onClick = (value) => {
@@ -50,7 +50,7 @@ const MobileHeader = () => {
             <ul className="transition_link">
             {logined?
               <li>
-                <label>{account.substr(0, 5)}...{account.substr(-4, 4)}</label>
+                <label>Signed in as <br/><strong className="sign-user"> {username}</strong></label>
               </li>:''
               }
               <li className={activeNav("home")}>

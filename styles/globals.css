@@ -142,7 +142,7 @@ img.mfp-img {
 }
 
 .accounticon {
-  margin-top: -5px;
+  margin-top: -3px;
 }
 
 .dropdown {
@@ -154,13 +154,15 @@ img.mfp-img {
   display: none;
   position: absolute;
   background-color: transparent;
-  min-width: 200px;
+  min-width: 140px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,1);
-  padding: 5px 10px;
+  padding: 10px 15px;
+  left: -30px;
   z-index: 1;
 }
 
-.dropdown:hover .dropdown-content{
+.dropdown:hover .dropdown-content {
+  border: 1px solid #222;
   display: block;
 }
 
@@ -371,6 +373,17 @@ canvas {
   height: 50px;
 }
 
+.dropdown-divider {
+  display: block;
+  height: 0;
+  margin: 8px 0;
+  border-top: 1px solid #eee;
+}
+
+.sign-user {
+  color: white;
+}
+
 @media (min-width: 2100px) {
   body {
     font-size: 22px !important;
@@ -382,6 +395,9 @@ canvas {
 
   .edrea_tm_header .menu ul li a {
     font-size: 26px !important;
+  }
+  .dropdown-content {
+    width: 200px !important;
   }
 }
 
@@ -397,6 +413,9 @@ canvas {
   .home-thunder {
     width: 615px;
     height: 380px;
+  }
+  .dropdown-content {
+    width: 200px !important;
   }
   /* .header-logo {
     width: 440px;
@@ -438,6 +457,10 @@ canvas {
   .edrea_tm_section#comic, .edrea_tm_section#novel {
     top: 40px;
   }
+  .dropdown-content {
+    width: 150px;
+  }
+
 }
 
 @media (min-width: 1400px) and (max-width: 1600px) {
@@ -455,7 +478,9 @@ canvas {
     width: 450px;
     height: 285px;
   }
-  
+  .dropdown-content {
+    width: 140px;
+  }
 }
 
 @media (max-width: 1400px) {
@@ -595,10 +620,22 @@ canvas {
     width: 100%;
   }
   
+  .home-thunder {
+    width: 330px;
+    height: 210px;
+  }
+
   .btn-pagination {
     width: 100%;
   }
   .coloring {
     font-size: 30px;
+  }
+}
+
+@media (max-width: 280px) {
+  .home-thunder {
+    width: 220px;
+    height: 140px;
   }
 }

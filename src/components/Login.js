@@ -5,16 +5,11 @@ import Web3 from "web3";
 
 const Register = ( {route } ) => {
     const navContext = useContext(context);
-    const {changeNav, logStatus, account, storeAccount, connectMetaMask} = navContext;
+    const {changeNav, logStatus, account, connectMetaMask} = navContext;
     const web3 = new Web3(Web3.givenProvider || "http://localhost:3000");
     const [errorMessage, setMessage] = useState('');
     const [checkType, setType] = useState('email');
     const [popup, setPopup] = useState(false);
-
-
-    // useEffect(() => {
-    //   connectMetaMask()
-    // }, [])
 
 
     const loginWithWallet = () =>  {
@@ -36,6 +31,8 @@ const Register = ( {route } ) => {
         if (res.status === 200) {
             const data = await res.json();
             const {name, email, wallet} = data.user;
+            console.log(data.user);
+            console.log(data.user);
             // create loggined user session, we have to create middleware for managing signined user. 
             logStatus({username: name, status: true});
             changeNav("home");

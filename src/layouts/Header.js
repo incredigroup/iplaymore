@@ -1,11 +1,12 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import { context } from "../context/context";
 import Image from 'next/image';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 const Header = ( {route} ) => {
   const navContext = useContext(context);
-  const { nav, changeNav, logined, logStatus, account } = navContext;
+  const { nav, changeNav, logined, logStatus, username } = navContext;
   const activeNav = (value) => (value == nav ? "active" : "");
+
   const logout = () => {
     logStatus({username: '', status:false});
     changeNav('home');
@@ -67,15 +68,17 @@ const Header = ( {route} ) => {
               </a>
             </li>
             {logined?
-            <li class="dropbox">
-              <div class="dropdown">
+            <li className="dropbox">
+              <div className="dropdown">
                 <a href="#">
                   <AccountCircleIcon fontSize="large" className="accounticon"></AccountCircleIcon>
                 </a>
-                <div class="dropdown-content" onClick={() => logout()}>
-                  <label>{account.substr(0, 5)}...{account.substr(-4, 4)}</label>
+                <div className="dropdown-content" >
+                  {/* <label>{account.substr(0, 5)}...{account.substr(-4, 4)}</label> */}
+                  <label>Signed in as <br/><strong className="sign-user"> {username}</strong></label>
                   <br/>
-                  <a class="logout" >
+                  <div role="none" className="dropdown-divider"></div>
+                  <a className="logout" onClick={() => logout()}>
                     Logout 
                   </a>
                 </div>

@@ -16,13 +16,9 @@ export default async function handler(
       // try {
         let { name, email, wallet, route } = body
         const exsitingUser = await User.find({
-          $or: [
-            {wallet: wallet},
-            {email: email}
-          ]
+          email: email
         })
         if(_.isEmpty(exsitingUser)) {
-          
           name = startCase(name)
           const created_at = new Date()
           const user = await User.create({wallet,name, email, route, created_at});
@@ -41,10 +37,7 @@ export default async function handler(
       // } else {
         const value = req.query.value;
         if (value) {
-          // const user = await User.findOne({
-          //   value: value,
-          // }).then((user) => user || null);
-          const user = await User.find({
+          const user = await User.findOne({
             $or: [
               {wallet: value},
               {email: value}
