@@ -21,7 +21,7 @@ export default async function handler(
         if(_.isEmpty(exsitingUser)) {
           name = startCase(name)
           const created_at = new Date()
-          const user = await User.create({wallet,name, email, route, created_at});
+          const user = await User.create({wallet, name, email, route, created_at});
           return res.status(200).json({ success: true, message: 'Success', user: user});
         } else {
           return res.status(201).json({ success: true, message: 'Already Registered User', user: exsitingUser });

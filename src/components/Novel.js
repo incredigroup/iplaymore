@@ -27,7 +27,7 @@ const Comic = () => {
                 <div className="edrea_tm_portfolio swiper-section">
                     <div className="edrea_tm_main_title">
                         <h3>
-                            THUNDER! ©<span className="coloring"> Novel</span>
+                            THUNDER!©<span className="coloring"> Novel</span>
                         </h3>
                     </div>
                     <div className="zoom"> 

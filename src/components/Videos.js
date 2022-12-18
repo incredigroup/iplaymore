@@ -14,7 +14,7 @@ const Videos = ( { data } ) => {
           <div className="edrea_tm_portfolio swiper-section">
             <div className="edrea_tm_main_title">
               <h3>
-                THUNDER! ©<span className="coloring">Videos</span>
+                THUNDER!©<span className="coloring"> Videos</span>
               </h3>
             </div>
             <div className="portfolio_list gallery_zoom">

@@ -592,7 +592,8 @@ h6 {
 }
 .coloring {
     font-size: 65px;
-    background: -webkit-linear-gradient(#732a2a, #17188b);
+    /* background: -webkit-linear-gradient(#732a2a, #17188b); */
+    background: orange;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent
 }
