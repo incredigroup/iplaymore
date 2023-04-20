@@ -96,7 +96,9 @@ h2 {
   font-size: 36px;
 }
 h3 {
-  font-size: 30px;
+  font-family: 'Serpentine-medium';
+  font-size: 52px;
+  line-height: 58px;
 }
 h4 {
   font-size: 24px;
@@ -448,9 +450,10 @@ h6 {
 .edrea_tm_section .section_inner {
   position: relative;
   width: 100%;
-  min-height: 100%;
+  /* min-height: 100%; */
   display: flex;
   align-items: center;
+  height: 820px;
 }
 
 /*---------------------------------------------------*/
@@ -1370,13 +1373,17 @@ h6 {
   border-color: #0070f3;
 }
 
+
 .edrea_tm_main_title {
   width: 100%;
   height: auto;
   clear: both;
   float: left;
   border-bottom: 1px dashed rgba(255, 255, 255, 0.15);
-  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  padding-top: 27px;
+  padding-bottom: 27px;
 }
 .edrea_tm_main_title h3 {
   font-weight: 700;
@@ -2487,4 +2494,173 @@ h6 {
   .edrea_tm_modalbox .news_popup_details .news_main_title {
     margin-bottom: 18px;
   }
+}
+.seach_nav {
+  padding-top: 17.5px;
+  padding-bottom: 17.5px;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  background-color: #ffffff00;
+  width: 1280px;
+  height: 81px !important;
+  height: auto;
+  clear: both;
+  float: left;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.15);
+}
+.gra_red{
+  border-radius: 5px;
+  font-size: 14px;
+  line-height: 150%;
+  padding: 10px 31.5px;
+  color : #EB4A4C !important;
+  font-family: "serpentine-medium" !important;
+  background: linear-gradient(90deg, rgba(143, 27, 29, 0.651) 0%, rgba(20,20,20,1) 27%, rgba(20,20,20,1) 72%, rgba(143, 27, 29, 0.555) 100%);
+  text-decoration: none;
+  text-align: center;
+}
+.button_group a{
+  width : 33.33%;
+  padding-bottom : 10px;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+}
+.button_group{
+  border-radius: 10%;
+  width : 543px;
+}
+.seachbar_input{
+  padding-left: 40px;
+  margin-bottom: 2rem;
+  background: url('../img/Icon\ -\ Copy.svg') #ffffff 2.5% center no-repeat;
+  margin-left: 4px;
+
+}
+.seach_nav .button_group a {
+  font-family: 'Inter' !important;
+  font-size: 14px;
+  line-height: 150%;
+  float: left;
+  display: block;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 12px 32.5px;
+  text-decoration: none;
+}
+
+.seach_nav a:hover  {
+  background-color: #dddddd44;
+  color: rgb(255, 255, 255);
+}
+.seach_nav a.active:hover  {
+  background-color: #dddddd44;
+  color: rgb(255, 255, 255);
+}
+.end{
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.seach_nav a.active {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  width : 175px;
+  color: white;
+  background: rgb(20,20,20);
+  background: linear-gradient(90deg, rgba(20,20,20,1) 0%, rgba(126,126,126,0.30015756302521013) 40%);
+  font-family: 'Inter' !important;
+  font-size: 14px;
+  line-height: 150%;
+}
+
+.seach_nav input[type=text] {
+  border-radius: 5px;
+  border-color: inherit;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background-color: #dddddd00;
+  width: 528px;
+  color: #ffffffa6;  ;
+  /* float: right;
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 16px;
+  border: none;
+  font-size: 17px; */
+}
+.seach_nav input[type=text] {
+  border: 1px solid #a3a3a3;  
+}
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  width: 320px;
+  height: 410px;
+  float: left;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  justify-content: center;
+}
+.column p{
+align-items: center;
+display: grid;
+font-family: 'Inter';
+font-style: normal;
+font-size: 20px;
+line-height: 24px;
+}
+.column h3{
+display: grid;
+height: 54px;
+text-align: center;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 20px;
+align-items: center;
+border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.column_item{
+  margin : 20px 24px 0px 23px;
+}
+.title_item{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 19px;
+  margin-bottom: 18px;
+}
+.item {
+  position: relative;
+  Width : 273px;
+  Height : 271px
+}
+.title_item_small {
+  position: relative;
+  width : 84px;
+  height : 28px
+}
+.marketing_character{
+  max-width: 1280px;
+  height: 820px;
 }

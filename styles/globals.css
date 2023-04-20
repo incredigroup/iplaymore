@@ -435,7 +435,8 @@ canvas {
   }
   .edrea_tm_content {
     top: 130px;
-    width: 80%;
+    width: 1280px;
+    max-height: 1013px;
   }
   .edrea_tm_header .header_inner {
     padding-top: 45px;

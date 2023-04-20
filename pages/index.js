@@ -7,12 +7,12 @@ import Comic from "../src/components/Comic";
 import Novel from "../src/components/Novel";
 import Layout from "../src/layouts/Layout";
 import Bonfire from "../src/components/Bonfire";
-
+import Marketplace from "../src/components/Marketplace";
 
 const YOUTUBE_PLAYLIST_ITEMS_API =
   "https://www.googleapis.com/youtube/v3/playlistItems";
 
-const Index = ({ videosData, bonfireData }) => {
+const Index = ({ videosData, bonfireData , marketplaceData}) => {
   return (
     <Layout>
       <Home />
@@ -22,6 +22,7 @@ const Index = ({ videosData, bonfireData }) => {
       <Novel/>
       <Register />
       <Videos data={videosData} />
+      <Marketplace data = {marketplaceData} />
       <Login />
     </Layout>
   );
@@ -37,12 +38,18 @@ export async function getServerSideProps() {
     `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&maxResults=50&playlistId=PLvEM_7dT9mGDjLAAJBMUgm4qpCzCtLAXm&key=${process.env.YOUTUBE_API_KEY}`
   );
 
+  const marketplaceRes = await fetch(
+    `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&maxResults=50&playlistId=PLvEM_7dT9mGDjLAAJBMUgm4qpCzCtLAXm&key=${process.env.YOUTUBE_API_KEY}`
+  );
+
   const videosData = await videosRes.json();
   const bonfireData= await bonfireRes.json();
+  const marketplaceData = await marketplaceRes.json();
   return {
     props: {
       videosData,
-      bonfireData
+      bonfireData,
+      marketplaceData
     },
   };
 }
