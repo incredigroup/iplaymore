@@ -2511,7 +2511,7 @@ h6 {
 }
 .gra_red{
   border-radius: 5px;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 150%;
   padding: 10px 31.5px;
   color : #EB4A4C !important;
@@ -2538,7 +2538,7 @@ h6 {
 }
 .seach_nav .button_group a {
   font-family: 'Inter' !important;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 150%;
   float: left;
   display: block;
@@ -2563,12 +2563,12 @@ h6 {
 .seach_nav a.active {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
-  width : 175px;
+  width : 180px;
   color: white;
   background: rgb(20,20,20);
   background: linear-gradient(90deg, rgba(20,20,20,1) 0%, rgba(126,126,126,0.30015756302521013) 40%);
   font-family: 'Inter' !important;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 150%;
 }
 

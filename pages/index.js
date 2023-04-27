@@ -8,6 +8,7 @@ import Novel from "../src/components/Novel";
 import Layout from "../src/layouts/Layout";
 import Bonfire from "../src/components/Bonfire";
 import Marketplace from "../src/components/Marketplace";
+import EmptyPage from "../src/components/EmptyPage";
 
 const YOUTUBE_PLAYLIST_ITEMS_API =
   "https://www.googleapis.com/youtube/v3/playlistItems";
@@ -23,6 +24,7 @@ const Index = ({ videosData, bonfireData , marketplaceData}) => {
       <Register />
       <Videos data={videosData} />
       <Marketplace data = {marketplaceData} />
+      <EmptyPage/>
       <Login />
     </Layout>
   );
