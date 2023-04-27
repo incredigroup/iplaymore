@@ -5,6 +5,7 @@ import Game from "../../src/components/Game";
 import Layout from "../../src/layouts/Layout";
 import Bonfire from "../../src/components/Bonfire";
 import Marketplace from "../../src/components/Marketplace";
+import EmptyPage from "../../src/components/EmptyPage";
 import { useRouter } from 'next/router'
 
 const YOUTUBE_PLAYLIST_ITEMS_API = 'https://www.googleapis.com/youtube/v3/playlistItems';
@@ -23,6 +24,7 @@ const Index = ({ videosData, bonfireData , marketplaceData}) => {
       <Game />
       <Register route={route}/>
       <Marketplace route={marketplaceData} />
+      <EmptyPage/>
     </Layout>
   );
 };
